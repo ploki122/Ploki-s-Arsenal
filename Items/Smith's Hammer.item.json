@@ -1,0 +1,57 @@
+{
+  "name": "Smith's Hammer",
+  "shape": [
+    "X"
+  ],
+  "rarity": "Common",
+  "type": [
+    "Hammer",
+    "Melee",
+    "Weapon"
+  ],
+  "group": [
+    "Hammers"
+  ],
+  "_supported_characters": [
+    "Satchel"
+  ],
+  "use_costs": {
+    "energy": 0
+  },
+  "use_limits": {
+    "perTurn": 1
+  },
+  "animation": "Attack",
+  "combat_effects": [
+    {
+      "trigger": "onUse",
+      "type": "Damage",
+      "value": 3.0,
+      "target": "enemy"
+    }
+  ],
+  "modifiers":[
+    {
+      "trigger": "onKillNonSummonEnemy",
+      "description" : "On kill, this can be forged again",
+      "effects": [
+        {
+          "type": "ClearItemStatusEffectOfType",
+          "item_status_effects": [
+            {
+              "type": "canBeForged"
+            }
+          ]
+        }, {
+          "type": "ItemStatusEffect",
+          "item_status_effects": [
+            {
+              "type": "canBeForged",
+              "value": 1.0
+            }
+          ]
+        }        
+      ]
+    }
+  ]
+}
