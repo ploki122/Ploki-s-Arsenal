@@ -1,0 +1,40 @@
+{
+    "name": "Fortified Piggybank",
+    "_sprite": "Piggybank.png",
+    "shape": [
+      "X"
+    ],
+    "flavor": "Free money! And it smells like bacon!",
+    "rarity": "Rare",
+    "type": [
+      "Accessory"
+    ],
+    "group": [
+      "Gold"
+    ],
+    "supported_characters": [
+      "Purse",
+      "Satchel",
+      "CR8",
+      "Pochette"
+    ],
+    "animation": "Attack",
+    "combat_effects": [
+        {
+            "trigger": "onDestroy",
+            "type": "GetGold",
+            "value": 0
+        }
+    ],
+    "modifiers": [
+      {
+        "trigger": "onCombatEnd",
+        "effects": [
+            {
+                "type":"GetGold",
+                "value": 3
+            }
+        ]
+      }
+    ]
+  }
