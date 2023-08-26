@@ -1,0 +1,42 @@
+{
+  "name": "Metal Yo-Yo",
+  "_sprite": "Wheel.png",
+  "shape": [
+    "X"
+  ],
+  "rarity": "Uncommon",
+  "type": [
+    "Weapon"
+  ],
+  "supported_characters": [
+    "Purse",
+    "Satchel",
+    "CR8"
+  ],
+  "use_costs": {
+    "energy": 1
+  },
+  "combat_effects": [
+    {
+      "trigger":"onMovePast",
+      "type":"Damage",
+      "target": "enemy",
+      "value": 4
+    }
+  ],
+  "movement_effects": [
+    {
+      "trigger": "onUse",
+      "y": -1,
+      "movement_type": "global",
+      "movement_length": "untilHit",
+      "description": "Moves down until stopped. Rewinds next turn."
+    },
+    {
+      "trigger": "onTurnEnd",
+      "y": 1,
+      "movement_type": "global",
+      "movement_length": "untilHit"
+    }
+  ]
+}

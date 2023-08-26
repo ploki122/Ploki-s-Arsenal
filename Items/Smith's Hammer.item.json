@@ -33,7 +33,6 @@
   "modifiers":[
     {
       "trigger": "onKillNonSummonEnemy",
-      "description" : "On kill, this can be forged again",
       "effects": [
         {
           "type": "ClearItemStatusEffectOfType",
@@ -51,7 +50,15 @@
             }
           ]
         }        
-      ]
+      ],
+      "description":"this can be forged again"
+    }
+  ],
+  "item_status_effects": [
+    {
+      "type": "canBeForged",
+      "value": 1.0,
+      "length": "permanent"
     }
   ]
 }
