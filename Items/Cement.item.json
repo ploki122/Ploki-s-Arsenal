@@ -1,0 +1,43 @@
+{
+  "name": "Cement",
+  "shape": [
+    "X"
+  ],
+  "rarity": "Uncommon",
+  "type": [
+    "Accessory"
+  ],
+  "supported_characters": [
+    "Purse",
+    "Satchel",
+    "CR8"
+  ],
+  "animation": "Block",
+  "add_modifiers": [
+    {
+      "trigger":"constantEarly",
+      "addmod_area": [
+          "board"
+      ],
+      "modifier": {
+        "trigger": "constant",
+        "trigger_description":"For each adjacent structure",
+        "trigger_on_type": [
+          "Structure"
+        ],
+        "trigger_area": [
+          "adjacent"
+        ],
+        "effects": [
+          {
+            "type": "Block",
+            "value": 1.0
+          }
+        ]
+      },
+      "addmod_types": [
+          "Structure"
+      ]
+    }
+  ]
+}

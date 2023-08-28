@@ -1,0 +1,37 @@
+{
+    "name": "Bigger is Better",
+    "shape": [
+      "X"
+    ],
+    "type": [
+      "Relic"
+    ],
+    "supported_characters": [
+      "Purse",
+      "Satchel",
+      "CR8",
+      "Pochette"
+    ],
+    "animation": "Attack",
+    "add_modifiers": [
+      {
+        "trigger":"constantEarly",
+        "addmod_area": ["board"],
+        "modifier": {
+          "trigger":"constant",
+          "effects": [
+              {
+                "type":"Damage",
+                "value": {
+                  "replace_with":"getSizeOfItem",
+                  "multiplier":1.0,
+                  "check_area": ["self"]
+                }
+              }
+          ],
+          "description":"+1 damage per space they occupy"
+        },
+        "addmod_types": ["Any"]
+      }
+    ]
+  }
