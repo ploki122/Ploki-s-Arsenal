@@ -1,3 +1,4 @@
 Manastone that conserves charge between fights (doesn't refill at combat start)
 
 Yoyo : onTurnEnd movement sucks
+RitualCircle : cannotBeDestroyed is useless, invincible isn't it either

@@ -1,0 +1,62 @@
+{
+    "name": "Self-sharpening Sword",
+    "_sprite": "Crossbow.png",
+    "shape": ["--X", "-X", "X"],
+    "flavor": "If only it could remain sharp...",
+    "rarity": "Common",
+    "type": [
+      "Weapon",
+      "Melee"
+    ],
+    "group": [
+      "Melee"
+    ],
+    "supported_characters": [
+      "Purse",
+      "Satchel",
+      "CR8"
+    ],
+    "use_costs": {
+      "energy": 0
+    },
+    "animation": "Attack",
+    "combat_effects": [
+        {
+            "trigger": "onUse",
+            "type": "Damage",
+            "target": "enemy",
+            "value": 5
+        }
+    ]
+    ,
+    "modifiers": [
+        {
+            "trigger": "onUse",
+            "effects": [
+                {
+                "type": "Damage",
+                "value": -1
+                }
+            ],
+            "trigger_area": [
+                "self"
+            ],
+            "stackable": true,
+            "length": "permanent"
+        },
+        {
+            "trigger": "onCombatEnd",
+            "effects": [
+                {
+                "type": "Damage",
+                "value": 1
+                }
+            ],
+            "trigger_area": [
+                "self"
+            ],
+            "stackable": true,
+            "length": "permanent"
+        }
+    ]
+  }

@@ -1,0 +1,72 @@
+{
+    "name": "Ritual Circle",
+    "_sprite": "Archangel Wings.png",
+    "shape": ["XXX", "XAX", "XXX"],
+    "flavor": "inspired by Darknight's suggestion",
+    "rarity": "Rare",
+    "type": [
+      "Accessory",
+      "Magic"
+    ],
+    "supported_characters": [
+      "Purse",
+      "Satchel",
+      "CR8",
+      "Pochette"
+    ],
+    "animation": "UseItem",
+    "use_costs": {
+        "mana":2
+    },
+    "modifiers": [
+        {
+            "trigger": "useEarly",
+            "mod_area": [
+                "ItemEffectArea"
+            ],
+            "mod_types": [
+                "Consumable"
+            ],
+            "effects": [
+                {
+                    "type": "ItemStatusEffect",
+                    "value": 1,
+                    "item_status_effects": [
+                        {
+                            "type":"cannotBeDestroyed",
+                            "length": "whileActive",
+                            "applyRightAway": true,
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "description":"Use the potion inside the circle, without consuming it.",
+            "stackable": false
+        },
+        {
+            "trigger": "onUse",
+            "effects": [
+              {
+                "type": "ItemStatusEffect",
+                "value": 2.0,
+                "item_status_effects": [
+                  {
+                    "type": "AddToManaCost",
+                    "value": 2.0,
+                    "length": "turns"
+                  }
+                ]
+              }
+            ],
+            "stackable": false
+        }
+    ],
+    "item_status_effects": [
+        {
+            "type":"conductive",
+            "length": "permanent",
+            "value": 1
+        }
+    ]
+}

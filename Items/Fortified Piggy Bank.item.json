@@ -18,7 +18,6 @@
       "CR8",
       "Pochette"
     ],
-    "animation": "Attack",
     "combat_effects": [
         {
             "trigger": "onDestroy",
