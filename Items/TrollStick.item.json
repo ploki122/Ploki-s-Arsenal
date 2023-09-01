@@ -1,0 +1,39 @@
+{
+    "name": "Troll stick",
+    "shape": ["X", "-X", "--X", "---X", "----X", "-----X"],
+    "rarity": "Rare",
+    "type": [
+      "Curse",
+      "Weapon"
+    ],
+    "animation": "Attack",
+    "use_costs": {"energy":0},
+    "combat_effects": [
+      {
+        "trigger":"onUse",
+        "type":"Vampire",
+        "target": "allEnemies",
+        "value": 999
+      },
+      {
+        "trigger":"useEarly",
+        "type":"Block",
+        "target": "allFriendlies",
+        "value": 999
+      },
+      {
+        "trigger":"onUse",
+        "type":"AP",
+        "value": 1
+      },
+      {
+        "trigger":"onAdd",
+        "type":"GetGold",
+        "trigger_description":"if you can add it to your backpack",
+        "description":"doubles your gold",
+        "value": {
+            "replace_with":"Gold"
+        }
+      }
+    ]
+  }
