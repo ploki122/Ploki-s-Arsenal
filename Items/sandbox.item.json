@@ -1,5 +1,5 @@
 {
-  "name": "Sandbox2",
+  "name": "Sandbox",
   "shape": [
     "X"
   ],
@@ -15,26 +15,53 @@
     "Pochette"
   ],
   "animation": "Attack",
-  "add_modifiers": [
+  "combat_effects": [
     {
-      "trigger":"constantEarly",
-      "addmod_area": ["board"],
-      "modifier": {
-        "trigger":"constant",
-        "effects": [
+      "trigger": "onUse",
+      "type": "Damage",
+      "value": 12.0,
+      "target": "enemy"
+    }
+  ],
+  "modifiers": [
+    {
+      "trigger": "onUse",
+      "effects": [
+        {
+          "type":"ItemStatusEffect",
+          "item_status_effects": [
             {
-              "type":"Damage",
-              "value": {
-                "replace_with":"getSizeOfItem",
-                "area_distance": "adjacent",
-                "multiplier":1.0,
-                "check_area": ["self"]
-              }
+              "type":"disabled",
+              "length": "turns",
+              "value": 1
             }
-        ],
-        "description":"+3 damage per space they occupy"
+          ]
+        }
+      ],
+      "stackable": true
     },
-      "addmod_types": ["Any"]
+    {
+      "trigger": "constant",
+      "trigger_on_type": [
+        "GridEmpty"
+      ],
+      "trigger_area": [
+        "adjacent"
+      ],
+      "effects": [
+        {
+          "type": "Damage",
+          "value": 1.0,
+          "target": "enemy"
+        }
+      ]
+    }
+  ],
+  "item_status_effects": [
+    {
+      "type": "canBeForged",
+      "value": 2.0,
+      "length": "permanent"
     }
   ]
 }

@@ -1,0 +1,47 @@
+{
+    "name": "Sandbox2",
+    "sprite": "Coal.png",
+    "shape": [
+      "X"
+    ],
+    "rarity": "Legendary",
+    "type": [
+      "Accessory"
+    ],
+    "group": [
+      "Berserker"
+    ],
+    "supported_characters": [
+      "Purse",
+      "Satchel",
+      "CR8",
+      "Pochette"
+    ],
+    "use_costs": {
+      "energy": 1
+    },
+    "use_limits": {
+      "perTurn": 1
+    },
+    "modifiers": [
+      {
+        "trigger": "onUse",
+        "mod_area": [
+          "row"
+        ],
+        "effects": [
+          {
+            "type": "ItemStatusEffect",
+            "item_status_effects": [
+                {
+                  "type":"disabled",
+                  "length": "turns",
+                  "value": 1
+                }
+            ]
+          }
+        ],
+        "stackable": true
+      }
+    ]
+  }

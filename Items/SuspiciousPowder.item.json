@@ -1,0 +1,65 @@
+{
+    "name": "Suspicious Powder",
+    "shape": [
+      "X"
+    ],
+    "flavor" : "Tested positive for monosaccharide",
+    "type": [
+      "Relic"
+    ],
+    "supported_characters": [
+      "Purse",
+      "Satchel",
+      "CR8",
+      "Tote",
+      "Pochette"
+    ],
+    "animation": "UseItem",
+    "combat_effects": [
+        {
+            "trigger":"constantEarly",
+            "target": "player",
+            "type":"Haste",
+            "value": -1,
+            "math": "mul",
+            "description":"hide"
+        },
+        {
+            "trigger":"constant",
+            "target": "player",
+            "type":"Haste",
+            "value": 3,
+            "description":"You have 3 Haste"
+        },
+        {
+            "trigger":"constantEarly",
+            "target": "player",
+            "type":"Rage",
+            "value": -1,
+            "math": "mul",
+            "description":"hide"
+        },
+        {
+            "trigger":"constant",
+            "target": "player",
+            "type":"Rage",
+            "value": 3,
+            "description":"You have 3 Rage"
+        },
+        {
+            "trigger":"constantEarly",
+            "target": "player",
+            "type":"Regen",
+            "value": -1,
+            "math": "mul",
+            "description":"hide"
+        },
+        {
+            "trigger":"constant",
+            "target": "player",
+            "type":"Regen",
+            "value": 3,
+            "description":"You have 3 Regen"
+        }
+    ]
+  }
