@@ -1,5 +1,6 @@
 {
     "name": "Self-sharpening Sword",
+    "findable": false,
     "_sprite": "Crossbow.png",
     "shape": ["--X", "-X", "X"],
     "flavor": "If only it could remain sharp...",

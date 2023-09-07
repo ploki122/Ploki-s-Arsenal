@@ -1,5 +1,6 @@
 {
     "name": "Sandbox2",
+    "findable": false,
     "sprite": "Coal.png",
     "shape": [
       "X"

@@ -1,5 +1,6 @@
 {
     "name": "Bigger is Better",
+    "findable": false,
     "shape": [
       "X"
     ],

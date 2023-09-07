@@ -1,5 +1,6 @@
 {
   "name": "Cement",
+  "findable": false,
   "shape": [
     "X"
   ],

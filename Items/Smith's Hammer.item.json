@@ -1,5 +1,6 @@
 {
   "name": "Smith's Hammer",
+  "findable": false,
   "shape": [
     "X"
   ],

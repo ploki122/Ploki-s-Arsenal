@@ -1,5 +1,6 @@
 {
     "name": "Troll stick",
+    "sprite": "Trollstick.png",
     "shape": ["X", "-X", "--X", "---X", "----X", "-----X"],
     "rarity": "Rare",
     "type": [

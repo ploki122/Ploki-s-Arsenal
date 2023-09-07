@@ -1,5 +1,6 @@
 {
     "name": "Ritual Circle",
+    "findable": false,
     "_sprite": "Archangel Wings.png",
     "shape": ["XXX", "XAX", "XXX"],
     "flavor": "inspired by Darknight's suggestion",

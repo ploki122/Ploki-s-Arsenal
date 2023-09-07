@@ -1,5 +1,6 @@
 {
     "name": "Fortified Piggybank",
+    "findable": false,
     "_sprite": "Piggybank.png",
     "shape": [
       "X"

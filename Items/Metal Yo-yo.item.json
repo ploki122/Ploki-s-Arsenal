@@ -1,5 +1,6 @@
 {
   "name": "Metal Yo-Yo",
+  "findable": false,
   "_sprite": "Wheel.png",
   "shape": [
     "X"
