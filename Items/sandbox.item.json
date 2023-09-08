@@ -1,13 +1,17 @@
 {
   "name": "Sandbox",
-  "findable": false,
+  "_sprite": "Spiked Helmet.png",
   "shape": [
     "X"
   ],
-  "rarity": "Legendary",
+  "rarity": "Uncommon",
   "type": [
-    "Gem",
-    "Accessory"
+    "Helmet",
+    "Armor"
+  ],
+  "group": [
+    "Spikes",
+    "Armored"
   ],
   "supported_characters": [
     "Purse",
@@ -16,53 +20,37 @@
     "Pochette"
   ],
   "animation": "Attack",
-  "combat_effects": [
-    {
-      "trigger": "onUse",
-      "type": "Damage",
-      "value": 12.0,
-      "target": "enemy"
-    }
-  ],
+  "use_costs": {
+    "energy":0
+  },
   "modifiers": [
     {
-      "trigger": "onUse",
+      "trigger": "constant",
+      "effects": [
+        {
+          "type": "ClearItemStatusEffectOfType",
+          "item_status_effects": [
+            {
+              "type":"isActivated",
+              "applyRightAway": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger":"constantExtraEarly",
       "effects": [
         {
           "type":"ItemStatusEffect",
           "item_status_effects": [
             {
-              "type":"disabled",
-              "length": "turns",
-              "value": 1
+              "type":"isActivated",
+              "applyRightAway": false
             }
           ]
         }
-      ],
-      "stackable": true
-    },
-    {
-      "trigger": "constant",
-      "trigger_on_type": [
-        "GridEmpty"
-      ],
-      "trigger_area": [
-        "adjacent"
-      ],
-      "effects": [
-        {
-          "type": "Damage",
-          "value": 1.0,
-          "target": "enemy"
-        }
       ]
-    }
-  ],
-  "item_status_effects": [
-    {
-      "type": "canBeForged",
-      "value": 2.0,
-      "length": "permanent"
     }
   ]
 }
